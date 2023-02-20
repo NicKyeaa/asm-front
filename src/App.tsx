@@ -1,10 +1,10 @@
-import UpperMainBar from './components/UpperMainBar';
+import MainLayout from './components/Layout/MainLayout';
 
 function App() {
 
   return (
     <div className="App">
-      <UpperMainBar></UpperMainBar>
+      <MainLayout></MainLayout>
     </div>
   )
 }
