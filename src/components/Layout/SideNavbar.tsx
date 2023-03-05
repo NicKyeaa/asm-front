@@ -9,7 +9,6 @@ import {
   IconUser,
   IconSettings,
 } from '@tabler/icons-react';
-import { MantineLogo } from '@mantine/ds';
 
 const useStyles = createStyles((theme) => ({
   wrapper: {
@@ -134,7 +133,7 @@ const linksMockdata = [
   'Wiki pages',
 ];
 
-export function DoubleNavbar() {
+const SideNavbar = () => {
   const { classes, cx } = useStyles();
   const [active, setActive] = useState('Releases');
   const [activeLink, setActiveLink] = useState('Settings');
@@ -187,3 +186,5 @@ export function DoubleNavbar() {
     </Navbar>
   );
 }
+
+export default SideNavbar;
