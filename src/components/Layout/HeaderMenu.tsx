@@ -131,7 +131,7 @@ const mockdata = [
   },
 ];
 
-const Headermenu = () => {
+const HeaderMenu = () => {
   const [drawerOpened, { toggle: toggleDrawer, close: closeDrawer }] =
     useDisclosure(false);
   const [linksOpened, { toggle: toggleLinks }] = useDisclosure(false);
@@ -290,3 +290,5 @@ const Headermenu = () => {
     </Box>
   );
 };
+
+export default HeaderMenu;
