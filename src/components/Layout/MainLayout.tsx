@@ -1,12 +1,12 @@
-import React from 'react'
-import SideNavbar from './SideNavbar';
+import React from "react";
+import SideNavbar from "./SideNavbar";
 
 const MainLayout = () => {
-    return (
-        <>
-            <SideNavbar />
-        </>
-    )
-}
+  return (
+    <>
+      <SideNavbar />
+    </>
+  );
+};
 
-export default MainLayout
+export default MainLayout;
