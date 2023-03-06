@@ -100,7 +100,7 @@ const data = [
   { link: "", label: "Other Settings", icon: IconSettings },
 ];
 
-const SideNavbar = () => {
+const SideNavbar = ({ children }: any) => {
   const { classes, cx } = useStyles();
   const [active, setActive] = useState("Billing");
 

@@ -1,12 +1,11 @@
-import React from "react";
 import SideNavbar from "./SideNavbar";
 import HeaderMenu from "./HeaderMenu";
 
-const MainLayout = () => {
+const MainLayout = (children: any) => {
   return (
     <>
       <HeaderMenu></HeaderMenu>
-      <SideNavbar />
+      <SideNavbar children={children} />
     </>
   );
 };
