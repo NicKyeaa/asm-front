@@ -8,6 +8,7 @@ import {
   rem,
 } from "@mantine/core";
 import {
+  IconAsset,
   IconBellRinging,
   IconFingerprint,
   IconKey,
@@ -90,7 +91,7 @@ const useStyles = createStyles((theme) => ({
 
 const data = [
   { link: "", label: "Notifications", icon: IconBellRinging },
-  { link: "", label: "Billing", icon: IconReceipt2 },
+  { link: "", label: "Assets", icon: IconAsset },
   { link: "", label: "Security", icon: IconFingerprint },
   { link: "", label: "SSH Keys", icon: IconKey },
   { link: "", label: "Databases", icon: IconDatabaseImport },
