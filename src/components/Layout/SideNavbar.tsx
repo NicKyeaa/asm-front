@@ -19,6 +19,7 @@ import {
   IconSwitchHorizontal,
   IconLogout,
 } from "@tabler/icons-react";
+import { Link } from "react-router-dom";
 
 const useStyles = createStyles((theme) => ({
   header: {
@@ -91,7 +92,7 @@ const useStyles = createStyles((theme) => ({
 
 const data = [
   { link: "", label: "Notifications", icon: IconBellRinging },
-  { link: "", label: "Assets", icon: IconAsset },
+  { link: "/assets", label: "Assets", icon: IconAsset },
   { link: "", label: "Security", icon: IconFingerprint },
   { link: "", label: "SSH Keys", icon: IconKey },
   { link: "", label: "Databases", icon: IconDatabaseImport },
@@ -104,11 +105,11 @@ const SideNavbar = () => {
   const [active, setActive] = useState("Billing");
 
   const links = data.map((item) => (
-    <a
+    <Link
       className={cx(classes.link, {
         [classes.linkActive]: item.label === active,
       })}
-      href={item.link}
+      to={item.link}
       key={item.label}
       onClick={(event) => {
         event.preventDefault();
@@ -117,7 +118,7 @@ const SideNavbar = () => {
     >
       <item.icon className={classes.linkIcon} stroke={1.5} />
       <span>{item.label}</span>
-    </a>
+    </Link>
   ));
 
   return (
