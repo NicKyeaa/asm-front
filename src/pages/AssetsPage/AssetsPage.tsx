@@ -6,7 +6,6 @@ const AssetsPage = () => {
   return (
     <>
       <MainLayout />
-      <AssetsGridParent />
     </>
   );
 };

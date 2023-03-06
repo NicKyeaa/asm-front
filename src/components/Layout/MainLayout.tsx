@@ -1,11 +1,10 @@
 import SideNavbar from "./SideNavbar";
 import HeaderMenu from "./HeaderMenu";
 
-const MainLayout = (children: any) => {
+const MainLayout = (child: any) => {
   return (
     <>
       <HeaderMenu></HeaderMenu>
-      <SideNavbar children={children} />
     </>
   );
 };

@@ -28,6 +28,7 @@ import {
   IconCoin,
   IconChevronDown,
 } from "@tabler/icons-react";
+import SideNavbar from "./SideNavbar";
 
 const useStyles = createStyles((theme) => ({
   link: {
@@ -131,7 +132,7 @@ const mockdata = [
   },
 ];
 
-const HeaderMenu = () => {
+const HeaderMenu = (props: any) => {
   const [drawerOpened, { toggle: toggleDrawer, close: closeDrawer }] =
     useDisclosure(false);
   const [linksOpened, { toggle: toggleLinks }] = useDisclosure(false);
@@ -241,7 +242,6 @@ const HeaderMenu = () => {
           />
         </Group>
       </Header>
-
       <Drawer
         opened={drawerOpened}
         onClose={closeDrawer}
@@ -287,6 +287,7 @@ const HeaderMenu = () => {
           </Group>
         </ScrollArea>
       </Drawer>
+      <SideNavbar />
     </Box>
   );
 };

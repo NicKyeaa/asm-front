@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import {
   createStyles,
   Navbar,
@@ -120,8 +120,9 @@ const SideNavbar = ({ children }: any) => {
     </Link>
   ));
 
+  const windowSize = useRef([window.innerWidth, window.innerHeight]);
   return (
-    <Navbar height={700} width={{ sm: 300 }} p='md'>
+    <Navbar height={windowSize.current[1] - 85} width={{ sm: 300 }} p='md'>
       <Navbar.Section grow>
         <Group className={classes.header} position='apart'>
           <Code sx={{ fontWeight: 700 }}>v0.1.12</Code>
