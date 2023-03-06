@@ -111,8 +111,7 @@ const SideNavbar = () => {
       })}
       to={item.link}
       key={item.label}
-      onClick={(event) => {
-        event.preventDefault();
+      onClick={() => {
         setActive(item.label);
       }}
     >
