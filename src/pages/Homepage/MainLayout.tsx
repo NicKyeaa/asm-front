@@ -6,6 +6,7 @@ import {
 } from "@ant-design/icons";
 import type { MenuProps } from "antd";
 import { Breadcrumb, Layout, Menu, theme } from "antd";
+import AssetTable from "../AssetsPage/AssetTable";
 
 const { Header, Content, Sider } = Layout;
 
@@ -76,7 +77,7 @@ const MainLayout: React.FC = () => {
               background: colorBgContainer,
             }}
           >
-            Content
+            <AssetTable />
           </Content>
         </Layout>
       </Layout>
