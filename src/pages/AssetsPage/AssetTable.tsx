@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { QueryClient, QueryClientProvider, useQuery } from "react-query";
 import { Table } from "antd";
 import type { ColumnsType } from "antd/es/table";
 
@@ -36,13 +37,19 @@ for (let i = 0; i < 100; i++) {
   });
 }
 
-const AssetTable: React.FC = () => (
-  <Table
-    columns={columns}
-    dataSource={data}
-    pagination={{ pageSize: 50 }}
-    scroll={{ y: 240 }}
-  />
-);
+const AssetTable: React.FC = () => {
+  const [dataTable, setDataTable] = useState([]);
+
+  const fetchData = async () => {};
+
+  return (
+    <Table
+      columns={columns}
+      dataSource={data}
+      pagination={{ pageSize: 50 }}
+      scroll={{ y: 240 }}
+    />
+  );
+};
 
 export default AssetTable;
