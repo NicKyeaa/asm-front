@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { QueryClient, QueryClientProvider, useQuery } from "react-query";
+import { useQuery } from "react-query";
 import { Table } from "antd";
 import type { ColumnsType } from "antd/es/table";
 
@@ -40,12 +40,17 @@ for (let i = 0; i < 100; i++) {
 const AssetTable: React.FC = () => {
   const [dataTable, setDataTable] = useState([]);
 
-  const fetchData = async () => {};
+  const { data, status }: any = useQuery("assets", fetchAssets);
 
+  if (status === "loading") {
+    return <p>Loading...</p>;
+  }
+
+  setDataTable(data);
   return (
     <Table
       columns={columns}
-      dataSource={data}
+      dataSource={dataTable}
       pagination={{ pageSize: 50 }}
       scroll={{ y: 240 }}
     />
