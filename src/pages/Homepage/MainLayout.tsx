@@ -38,7 +38,7 @@ const MainLayout: React.FC = () => {
           style={{
             height: 168,
             width: 178,
-            background: "rgba(255, 255, 255, 0.2)",
+            background: "rgba(155, 155, 255, 0.2)",
           }}
         />
         <Menu
@@ -50,11 +50,15 @@ const MainLayout: React.FC = () => {
         />
       </Sider>
       <Layout className='site-layout'>
+        <Header></Header>
         <Breadcrumb style={{ margin: "16px 0" }}>
           <Breadcrumb.Item>Home</Breadcrumb.Item>
           <Breadcrumb.Item>List</Breadcrumb.Item>
           <Breadcrumb.Item>App</Breadcrumb.Item>
         </Breadcrumb>
+        <Content>
+          <AssetTable />
+        </Content>
       </Layout>
     </Layout>
   );
