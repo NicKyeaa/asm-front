@@ -2,12 +2,9 @@ import React from "react";
 import { BookOutlined, ClusterOutlined } from "@ant-design/icons";
 import type { MenuProps } from "antd";
 import { Breadcrumb, Layout, Menu, theme } from "antd";
-// import { QueryClient, QueryClientProvider } from "react-query";
 
 // Components Import
 import AssetTable from "../AssetsPage/AssetTable";
-
-// const queryClient = new QueryClient();
 
 const { Header, Content, Sider } = Layout;
 
@@ -29,13 +26,7 @@ const MainLayout: React.FC = () => {
     token: { colorBgContainer },
   } = theme.useToken();
 
-  // const fetchAssets = async () => {
-  //   const res = await fetch("http://localhost:3500/equipment/");
-  //   return res.json;
-  // };
-
   return (
-    // <QueryClientProvider client={queryClient}>
     <Layout>
       <Header className='header'>
         <div className='logo' />
@@ -75,7 +66,6 @@ const MainLayout: React.FC = () => {
         </Layout>
       </Layout>
     </Layout>
-    // </QueryClientProvider>
   );
 };
 
