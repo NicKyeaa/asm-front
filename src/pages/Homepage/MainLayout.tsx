@@ -27,7 +27,7 @@ const MainLayout: React.FC = () => {
   } = theme.useToken();
 
   return (
-    <Layout>
+    <Layout style={{ minHeight: "100vh" }}>
       <Sider
         width={200}
         style={{
@@ -43,7 +43,7 @@ const MainLayout: React.FC = () => {
           items={items2}
         />
       </Sider>
-      <Layout style={{ padding: "0 24px 24px" }}>
+      <Layout className='site-layout'>
         <Breadcrumb style={{ margin: "16px 0" }}>
           <Breadcrumb.Item>Home</Breadcrumb.Item>
           <Breadcrumb.Item>List</Breadcrumb.Item>
@@ -57,7 +57,15 @@ const MainLayout: React.FC = () => {
             background: colorBgContainer,
           }}
         >
-          <AssetTable />
+          <div
+            style={{
+              padding: 24,
+              minHeight: 360,
+              background: colorBgContainer,
+            }}
+          >
+            <AssetTable />
+          </div>
         </Content>
       </Layout>
     </Layout>
