@@ -40,17 +40,17 @@ for (let i = 0; i < 100; i++) {
 const AssetTable: React.FC = () => {
   const [dataTable, setDataTable] = useState([]);
 
-  const { data, status }: any = useQuery("assets", fetchAssets);
+  // const { data, status }: any = useQuery("assets", fetchAssets);
 
-  if (status === "loading") {
-    return <p>Loading...</p>;
-  }
+  // if (status === "loading") {
+  //   return <p>Loading...</p>;
+  // }
 
-  setDataTable(data);
+  // setDataTable(data);
   return (
     <Table
       columns={columns}
-      dataSource={dataTable}
+      dataSource={data}
       pagination={{ pageSize: 50 }}
       scroll={{ y: 240 }}
     />
