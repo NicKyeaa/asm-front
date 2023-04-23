@@ -38,7 +38,13 @@ const MainLayout: React.FC = () => {
         />
       </Header>
       <Layout>
-        <Sider width={200} style={{ background: colorBgContainer }}>
+        <Sider
+          width={200}
+          style={{
+            background: colorBgContainer,
+            position: "fixed",
+          }}
+        >
           <Menu
             mode='inline'
             defaultSelectedKeys={["1"]}
