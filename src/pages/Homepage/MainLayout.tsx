@@ -32,7 +32,6 @@ const MainLayout: React.FC = () => {
         width={200}
         style={{
           background: colorBgContainer,
-          position: "fixed",
         }}
       >
         <Menu
@@ -49,24 +48,6 @@ const MainLayout: React.FC = () => {
           <Breadcrumb.Item>List</Breadcrumb.Item>
           <Breadcrumb.Item>App</Breadcrumb.Item>
         </Breadcrumb>
-        <Content
-          style={{
-            padding: 24,
-            margin: 0,
-            minHeight: 280,
-            background: colorBgContainer,
-          }}
-        >
-          <div
-            style={{
-              padding: 24,
-              minHeight: 360,
-              background: colorBgContainer,
-            }}
-          >
-            <AssetTable />
-          </div>
-        </Content>
       </Layout>
     </Layout>
   );
