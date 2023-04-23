@@ -34,6 +34,13 @@ const MainLayout: React.FC = () => {
           background: colorBgContainer,
         }}
       >
+        <div
+          style={{
+            height: 168,
+            width: 178,
+            background: "rgba(255, 255, 255, 0.2)",
+          }}
+        />
         <Menu
           mode='inline'
           defaultSelectedKeys={["1"]}
