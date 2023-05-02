@@ -16,7 +16,13 @@ const WorkOrders: React.FC = () => {
   return (
     <Row gutter={6}>
       <Col span={6} offset={2}>
-        <Card title='Work Orders' tabList={tabList}></Card>
+        <Card
+          title='Work Orders'
+          tabList={tabList}
+          style={{ borderBottom: "dotted" }}
+        >
+          Col
+        </Card>
       </Col>
       <Col span={6} offset={2}>
         Col
