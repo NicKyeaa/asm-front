@@ -5,6 +5,7 @@ import { Breadcrumb, Layout, Menu, theme } from "antd";
 
 // Components Import
 import AssetTable from "../AssetsPage/AssetTable";
+import WorkOrders from "../WorkOrdersPage/WorkOrders";
 
 const { Header, Content, Sider } = Layout;
 
@@ -57,7 +58,8 @@ const MainLayout: React.FC = () => {
           <Breadcrumb.Item>App</Breadcrumb.Item>
         </Breadcrumb>
         <Content>
-          <AssetTable />
+          {/* <AssetTable /> */}
+          <WorkOrders></WorkOrders>
         </Content>
       </Layout>
     </Layout>
