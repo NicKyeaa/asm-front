@@ -13,19 +13,31 @@ const tabList = [
 ];
 
 const WorkOrders: React.FC = () => {
+  const WorkOrdersCardStyles = {
+    borderRadius: "15px",
+    border: "1px solid rgba(23,45,0,0.20)",
+    height: "75vh",
+  };
+
   return (
-    <Row gutter={6}>
-      <Col span={6} offset={2}>
+    <Row>
+      <Col span={8} offset={1}>
         <Card
           title='Work Orders'
           tabList={tabList}
-          style={{ borderBottom: "dotted" }}
+          style={WorkOrdersCardStyles}
         >
           Col
         </Card>
       </Col>
-      <Col span={6} offset={2}>
-        Col
+      <Col span={13} offset={1}>
+        <Card
+          title='Test 2 Column'
+          tabList={tabList}
+          style={WorkOrdersCardStyles}
+        >
+          Col
+        </Card>
       </Col>
     </Row>
   );
