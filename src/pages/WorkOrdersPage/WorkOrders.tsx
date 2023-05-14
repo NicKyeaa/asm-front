@@ -34,6 +34,11 @@ const WorkOrders: React.FC = () => {
         >
           <Space direction='vertical' size='middle'>
             <WorkOrderCard />
+            <WorkOrderCard />
+            <WorkOrderCard />
+            <WorkOrderCard />
+            <WorkOrderCard />
+            <WorkOrderCard />
           </Space>
         </Card>
       </Col>
