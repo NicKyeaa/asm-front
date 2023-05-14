@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { Col, Row, Card } from "antd";
+import { Col, Row, Card, Space } from "antd";
+import WorkOrderCard from "./WorkOrderCard";
 
 const tabList = [
   {
@@ -13,10 +14,14 @@ const tabList = [
 ];
 
 const WorkOrders: React.FC = () => {
-  const WorkOrdersCardStyles = {
+  const workOrdersCardStyles = {
     borderRadius: "15px",
     border: "1px solid rgba(23,45,0,0.20)",
     height: "75vh",
+  };
+
+  const workOrderSpaceStyles = {
+    width: "inherit",
   };
 
   return (
@@ -25,16 +30,18 @@ const WorkOrders: React.FC = () => {
         <Card
           title='Work Orders'
           tabList={tabList}
-          style={WorkOrdersCardStyles}
+          style={workOrdersCardStyles}
         >
-          Col
+          <Space direction='vertical' size='middle'>
+            <WorkOrderCard />
+          </Space>
         </Card>
       </Col>
       <Col span={13} offset={1}>
         <Card
           title='Test 2 Column'
           tabList={tabList}
-          style={WorkOrdersCardStyles}
+          style={workOrdersCardStyles}
         >
           Col
         </Card>
