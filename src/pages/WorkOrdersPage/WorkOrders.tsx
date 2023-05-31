@@ -53,8 +53,9 @@ const WorkOrders: React.FC = () => {
         >
           <List
             dataSource={WorkOrderCardData}
+            itemLayout='vertical'
             renderItem={(item) => (
-              <List.Item>
+              <List.Item key={item.title} style={{ padding: "0px" }}>
                 <WorkOrderCard />
               </List.Item>
             )}

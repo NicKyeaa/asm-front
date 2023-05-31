@@ -5,6 +5,7 @@ const WorkOrderCard: React.FC = () => {
   const workOrderCardStyles = {
     width: "100%",
     border: "1px solid rgba(23,45,0,0.20)",
+    padding: "0%",
   };
   return (
     <>
