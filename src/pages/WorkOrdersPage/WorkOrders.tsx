@@ -13,6 +13,24 @@ const tabList = [
   },
 ];
 
+const WorkOrderCardData = [
+  {
+    title: "Work order 1",
+  },
+  {
+    title: "Work order 2",
+  },
+  {
+    title: "Work order 3",
+  },
+  {
+    title: "Work order 4",
+  },
+  {
+    title: "Work order 5",
+  },
+];
+
 const WorkOrders: React.FC = () => {
   const workOrdersCardStyles = {
     borderRadius: "15px",
@@ -32,14 +50,14 @@ const WorkOrders: React.FC = () => {
           tabList={tabList}
           style={workOrdersCardStyles}
         >
-          <Space direction='vertical' size='middle'>
-            <WorkOrderCard />
-            <WorkOrderCard />
-            <WorkOrderCard />
-            <WorkOrderCard />
-            <WorkOrderCard />
-            <WorkOrderCard />
-          </Space>
+          <List
+            dataSource={WorkOrderCardData}
+            renderItem={(item) => (
+              <List.Item>
+                <WorkOrderCard />
+              </List.Item>
+            )}
+          ></List>
         </Card>
       </Col>
       <Col span={13} offset={1}>
