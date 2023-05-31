@@ -3,11 +3,12 @@ import { Card } from "antd";
 
 const WorkOrderCard: React.FC = () => {
   const workOrderCardStyles = {
-    width: "inherit",
+    width: "100%",
+    border: "1px solid rgba(23,45,0,0.20)",
   };
   return (
     <>
-      <Card title='Default Work Order' style={workOrderCardStyles}>
+      <Card title='Default Work Order' style={workOrderCardStyles} type='inner'>
         <p>Text</p>
       </Card>
     </>

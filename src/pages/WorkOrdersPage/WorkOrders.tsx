@@ -36,6 +36,7 @@ const WorkOrders: React.FC = () => {
     borderRadius: "15px",
     border: "1px solid rgba(23,45,0,0.20)",
     height: "75vh",
+    padding: "0",
   };
 
   const workOrderSpaceStyles = {
