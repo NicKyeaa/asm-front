@@ -36,7 +36,6 @@ const WorkOrders: React.FC = () => {
     borderRadius: "15px",
     border: "1px solid rgba(23,45,0,0.20)",
     height: "75vh",
-    padding: "0",
   };
 
   const workOrderSpaceStyles = {
@@ -50,6 +49,7 @@ const WorkOrders: React.FC = () => {
           title='Work Orders'
           tabList={tabList}
           style={workOrdersCardStyles}
+          bodyStyle={{ padding: "0px" }}
         >
           <List
             dataSource={WorkOrderCardData}
